@@ -3,9 +3,9 @@
 int strlen (char s[]);
 
 int main() {
-  char *input = "west farm is far" ;
+  char *input = "west farm is far from gone" ;
   int length = strlen(input);
-  printf("\nLine: %d", length);
+  printf("\nThe string of '%s' is %d characters long", input, length);
 
 }
 

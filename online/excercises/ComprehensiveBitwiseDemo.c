@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Results are in description
 // Function to print a number in binary format
 void print_binary(unsigned int n, int bits) {
     for (int i = bits - 1; i >= 0; i--) {

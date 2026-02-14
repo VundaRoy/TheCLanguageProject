@@ -4,6 +4,9 @@
 int main() {
     size_t size = sizeof(int);
     printf("The size of an integer is %zu bytes.\n", size);
+    
+    int sizeoft = sizeof(size_t);
+    printf("size_t is %zu \n", sizeoft);
 
     size_t array_length = 102;
     printf("The array length is %zu.\n", array_length);

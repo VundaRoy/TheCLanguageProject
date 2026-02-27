@@ -2,14 +2,18 @@
 #include <stdbool.h>
 
 int main() {
-  int age = 17;
+  int age = 27;
   bool isCitizen = true; 
+  bool rightElectorate = true;
 
   if (age >= 18) {
     printf("Old enough to vote.\n");
 
     if (isCitizen) {
-      printf("And you are a citizen, so you can vote!\n");
+      if(rightElectorate)
+       printf("Your are a citizen who can vote here.\n");
+       else
+       printf("And you are a citizen, but you need to vote elsewhere!\n");
     } else {
       printf("But you must be a citizen to vote.\n");
     }

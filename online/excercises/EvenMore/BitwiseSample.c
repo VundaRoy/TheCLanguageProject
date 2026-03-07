@@ -1,26 +1,10 @@
 #include <stdio.h>
-void display_binary(int n) {
-    if (n == 0) {
-        printf("0\n");
-        return;
+// Function to print a number in binary format
+void display_binary(unsigned int n, int bits) {
+    for (int i = bits - 1; i >= 0; i--) {
+        printf("%d", (n >> i) & 1);
+        if (i % 4 == 0 && i != 0) printf(" ");  // Space every 4 bits for readability
     }
-
-    int binaryNum[32]; // Array to store binary digits (assuming 32 bits for int)
-    int i = 0;
-    
-    // Store remainders in reverse order
-    while (n > 0) {
-        binaryNum[i] = n % 2;
-        n = n / 2;
-        i++;
-    }
-    
-    // Print the array in the correct order (reverse of storage)
-    printf("Binary representation: ");
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binaryNum[j]);
-    }
-    printf("\n");
 }
 
 int main() {
@@ -28,8 +12,8 @@ int main() {
   int b = 3;   // 0011
 
   int result = a ^ b;
-  printf("%d in binary is \n", a); display_binary(a);
-  printf("%d in binary is \n", b); display_binary(b);
+  printf("%d in binary is ", a); display_binary(a,4); printf("\n");
+  printf("%d in binary is ", b); display_binary(b,4); printf("\n");
   printf("Result: %d\n", result); // 5 (0101)
   return 0;
 }

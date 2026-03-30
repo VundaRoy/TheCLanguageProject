@@ -12,10 +12,10 @@ enum Browsers {
   
 int main() {
   
-  
+  printf("Browser count is %d\n", BROWSER_COUNT);
   for(enum Browsers browser = CHROME; browser < BROWSER_COUNT; browser++)
   {
-     printf("Browser value: %d\n", browser);
+     printf("Browser value: %d\n", browser, BROWSER_COUNT);
   }
 
   return 0;

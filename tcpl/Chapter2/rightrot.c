@@ -16,6 +16,6 @@ int main() {
     unsigned x = 255; 
     int p = 40;
     
-    printf("Result: 0x%x\n", rightrot(x, p));
+    printf("Result: rightrot(%d, %d) 0x%x\n", x, p, rightrot(x, p));
     return 0;
 }

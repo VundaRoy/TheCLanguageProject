@@ -14,6 +14,6 @@ int main() {
     unsigned y = 0x2B; // 0010 1011
     int p = 5, n = 3;
     
-    printf("Result: 0x%x\n", setbits(x, p, n, y));
+    printf("setbits(%d,%d,%d,%d) Result is 0x%x\n",x,p,n,y, setbits(x, p, n, y));
     return 0;
 }

@@ -2,10 +2,19 @@
 
  main() {
   // Example 1: Converting a single character
-    char upperChar = 'G';
+    char upperChar = 'r';
     char result = upper(upperChar);
     
-    printf("Original: %c -> Lowercase: %c\n", upperChar, result);
+    printf("Original char: %c \nConverted to Lowercase: %c\n", upperChar, result);
+    //Converted to upper string 
+    char text1[] = "dieses ist sein du nicht wahr?";
+     printf("Original String: %s\n", text1);
+    printf("Converted to Uppercase String: ");
+    for (int i = 0; text1[i] != '\0'; i++) {
+        // Call the function for each character
+        putchar(upper(text1[i]));
+    }
+    printf("\n");
 
     // Example 2: Converting an entire string using a loop
     char text[] = "COMO ES TU ca va bieN!";

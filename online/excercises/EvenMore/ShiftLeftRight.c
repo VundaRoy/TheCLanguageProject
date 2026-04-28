@@ -17,11 +17,11 @@ int main() {
   printf("Or: %d >> %d is %d\n",x, i, x >> i  );
   
   printf("The binary representation are as follows:\n");
-  printf("Where %d is ", x); display_binary(x,4); printf("\n");
-  printf("Where %d is ", i); display_binary(i,4); printf("\n");
+  printf("Where %d is ", x); display_binary(x,8); printf("\n");
+  printf("Where %d is ", i); display_binary(i,8); printf("\n");
   
   printf("And the results being...\n");
-  printf("Where the << result is %d ", x<<i); display_binary(x<<i,4); printf("\n");
-  printf("And the >> result is %d ", x>>i); display_binary(x>>i,4); printf("\n");
+  printf("Where the << result is %d ", x<<i); display_binary(x<<i,8); printf("\n");
+  printf("And the >> result is %d ", x>>i); display_binary(x>>i,8); printf("\n");
   return 0;
 }

@@ -3,11 +3,10 @@
 
 #define IN 1
 #define OUT 0
-
 int main() {
-    int c, n1, nw, nc, state;
+    int c, numberOfLines, numberOfWords, numberOfCharacters, state;
     state = OUT;
-    n1 = nw = nc = 0;
+    numberOfLines = numberOfWords = numberOfCharacters = 0;
 
     const char *test_input = "uyar vara uyar nalam \n";
     int input_length = strlen(test_input);
@@ -16,10 +15,10 @@ int main() {
     while (i < input_length) {
         c = test_input[i];
         i++;
-        ++nc;
+        ++numberOfCharacters;
 
         if (c == '\n')
-            ++n1;
+            ++numberOfLines;
 
         if (c == ' ' || c == '\n' || c == '\t') {
             if (state == IN) {
@@ -29,12 +28,12 @@ int main() {
         } else {
             if (state == OUT) {
                 state = IN;
-                ++nw;
+                ++numberOfWords;
             }
             putchar(c);  // Print character of the word
         }
     }
 
-    printf("\nLines: %d, Words: %d, Characters: %d\n", n1, nw, nc);
+    printf("\nLines: %d, Words: %d, Characters: %d\n", numberOfLines, numberOfWords, numberOfCharacters);
     return 0;
 }

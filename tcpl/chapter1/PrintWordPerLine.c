@@ -8,7 +8,7 @@ int main() {
     state = OUT;
     numberOfLines = numberOfWords = numberOfCharacters = 0;
 
-    const char *test_input = "uyar vara uyar nalam \n";
+    const char *test_input = "uyar vara uyar nalam \n udai yavan yavan avan\n";
     int input_length = strlen(test_input);
     int i = 0;
 

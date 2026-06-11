@@ -14,10 +14,15 @@ int my_atoi(char s[])
 
 int main() {
   
-  char mystring[] = "  by gones are 234";
+  char str1[] = "00111 and 2  by gones are 234";
+  char str2[] = " by gones are 234";
   int result;
   
-  result = my_atoi(mystring);
-  printf("From %s to %d", mystring, result);
+  result = my_atoi(str1);
+  printf("Where first char is numeric %s, the result is %d\n", str1, result);
+  
+  
+  result = my_atoi(str2);
+  printf("Where the first char is not numeric %s , the result is %d", str2, result);
   return 0;
 }

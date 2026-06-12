@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 int binsearch(int x, int v[], int n)
 {
@@ -18,14 +19,34 @@ int binsearch(int x, int v[], int n)
   return -1;  /* no match*/
 }
 
+double measure_time(int x, int v[], int n, int *result)
+{
+   clock_t start, end;
+   start = clock();
+   *result = binsearch(x,v,n);
+   end = clock();
+   return ((double)(end - start))/CLOCKS_PER_SEC;
+}
+
 main()
 {
-  int i, x, n, vectors[100];
-  for(i=0;i<100;i++)
-    vectors[i] = i;
-    
-   x=24; n=100;
-  printf("%d is found in binsearch...%d", x, binsearch(x,vectors,n));
-    
+
+int max = 100000000;  
+int i, x, n, vectors[max], result;
+    double time_taken;
+
+    for (i = 0; i < max; i++)
+        vectors[i] = i;
+
+    x = 99090000;
+    n = max;
+
+    time_taken = measure_time(x, vectors, n, &result);
+
+    printf("%d found at index %d\n", x, result);
+    printf("Time taken: %f seconds\n", time_taken);
+
+    return 0;
+
    
 }

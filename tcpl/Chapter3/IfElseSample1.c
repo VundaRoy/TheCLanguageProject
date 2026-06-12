@@ -20,11 +20,11 @@ int binsearch(int x, int v[], int n)
 
 main()
 {
-  int i, x, n, vectors[10];
-  for(i=0;i<10;i++)
+  int i, x, n, vectors[100];
+  for(i=0;i<100;i++)
     vectors[i] = i;
     
-   x=20; n=10;
+   x=24; n=100;
   printf("%d is found in binsearch...%d", x, binsearch(x,vectors,n));
     
    
